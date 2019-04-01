@@ -1,0 +1,2 @@
+class PersonGiftEvent < ApplicationRecord
+end

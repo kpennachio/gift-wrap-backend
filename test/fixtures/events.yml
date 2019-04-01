@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  title: MyString
+  occasion: MyString
+  date: 2019-04-01
+  notes: MyString
+  registry_link: MyString
+
+two:
+  user_id: 1
+  title: MyString
+  occasion: MyString
+  date: 2019-04-01
+  notes: MyString
+  registry_link: MyString
