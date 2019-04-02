@@ -1,7 +1,7 @@
 class CreateGifts < ActiveRecord::Migration[5.2]
   def change
     create_table :gifts do |t|
-      t.integer :user_id
+      t.references :user, index: true, foreign_key: true
       t.string :name
       t.string :notes
       t.string :image
