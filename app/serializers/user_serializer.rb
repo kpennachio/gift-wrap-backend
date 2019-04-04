@@ -3,7 +3,7 @@ class UserSerializer < ActiveModel::Serializer
 
   def events
     self.object.events.map do |event|
-      date = Date.strptime(event.date, "%m-%d-%Y")
+        date = Date.strptime(event.date, "%m-%d-%Y")
       {
         id: event.id,
         title: event.title,

@@ -8,6 +8,8 @@ class Event < ApplicationRecord
   has_many :event_gift_ideas
   has_many :gift_ideas, through: :event_gift_ideas
 
+  validates :date, presence: true
+
 end
 
 
