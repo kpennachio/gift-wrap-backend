@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :events, :people
+  attributes :id, :username, :events, :people, :gifts
 
   def events
     self.object.events.map do |event|
@@ -13,7 +13,10 @@ class UserSerializer < ActiveModel::Serializer
         month: date.month,
         year: date.year,
         notes: event.notes,
-        registryLink: event.registry_link
+        registryLink: event.registry_link,
+        people: event.people,
+        gifts: event.gifts,
+        gift_ideas: event.gift_ideas
       }
     end
   end
@@ -23,7 +26,29 @@ class UserSerializer < ActiveModel::Serializer
       {
         id: person.id,
         name: person.name,
-        notes: person.notes
+        notes: person.notes,
+        gifts: person.gifts,
+        events: person.events,
+        gift_ideas: person.gift_ideas
+      }
+    end
+  end
+
+  def gifts
+    self.object.gifts.map do |gift|
+      {
+        id: gift.id,
+        name: gift.name,
+        notes: gift.notes,
+        image: gift.image,
+        list_price: gift.list_price,
+        store: gift.store,
+        link: gift.link,
+        age_range: gift.age_range,
+        people: gift.people,
+        events: gift.events,
+        pending_events: gift.pending_events,
+        pending_people: gift.pending_people
       }
     end
   end

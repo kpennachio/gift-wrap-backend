@@ -1,5 +1,5 @@
 class PersonGiftEvent < ApplicationRecord
-  belongs_to :gift
-  belongs_to :person
+  belongs_to :gift, optional: true
+  belongs_to :person, optional: true
   belongs_to :event
 end
