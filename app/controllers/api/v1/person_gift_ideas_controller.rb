@@ -32,7 +32,7 @@ class Api::V1::PersonGiftIdeasController < ApplicationController
   private
 
   def person_gift_idea_params
-    params.permit(:person_gift_ideaname)
+    params.permit(:gift_idea_id, :person_id)
   end
 
   def find_person_gift_idea
