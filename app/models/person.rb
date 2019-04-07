@@ -7,4 +7,7 @@ class Person < ApplicationRecord
 
   has_many :person_gift_ideas
   has_many :gift_ideas, through: :person_gift_ideas
+
+  validates :name, presence: true
+
 end
