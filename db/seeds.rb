@@ -24,13 +24,19 @@ katie = User.create(username: "katie")
 
 budget = Budget.create(user_id: katie.id, year: 2019, budget: 100)
 
-allie = Person.create(user_id: katie.id, name: "Allie")
+allie = Person.create(user_id: katie.id, name: "Allie", notes: "")
 
-dan = Person.create(user_id: katie.id, name: "Dan")
+dan = Person.create(user_id: katie.id, name: "Dan", notes: "")
 
-kevin = Person.create(user_id: katie.id, name: "Kevin")
+dad = Person.create(user_id: katie.id, name: "Dad", notes: "")
 
-julia = Person.create(user_id: katie.id, name: "Julia")
+mom = Person.create(user_id: katie.id, name: "Mom", notes: "")
+
+
+
+kevin = Person.create(user_id: katie.id, name: "Kevin", notes: "")
+
+julia = Person.create(user_id: katie.id, name: "Julia", notes: "")
 
 
 
@@ -45,11 +51,11 @@ julia = Person.create(user_id: katie.id, name: "Julia")
 
 ###### GIFTS #######
 
-stroller = Gift.create(user_id: katie.id, name: "stroller", list_price: 99.99, store: "Buy Buy Baby")
+stroller = Gift.create(user_id: katie.id, name: "stroller", list_price: 99.99, store: "Buy Buy Baby", notes: "")
 
-blanket = Gift.create(user_id: katie.id, name: "blanket")
+blanket = Gift.create(user_id: katie.id, name: "blanket", notes: "")
 
-toy = Gift.create(user_id: katie.id, name: "toy")
+toy = Gift.create(user_id: katie.id, name: "toy", notes: "")
 
 
 Gift.create(
@@ -58,7 +64,8 @@ Gift.create(
   list_price: 49.95,
   store: "UncommonGoods",
   link: "https://www.uncommongoods.com/product/new-york-times-custom-front-page-puzzle",
-  image: "https://www.uncommongoods.com/images/items/42300/42300_1_640px.jpg"
+  image: "https://www.uncommongoods.com/images/items/42300/42300_1_640px.jpg",
+  notes: ""
 )
 
 Gift.create(
@@ -67,7 +74,8 @@ Gift.create(
   list_price: 59.93,
   store: "Amazon",
   link: "https://www.amazon.com/gp/product/B000VYBRDE?pf_rd_p=1cac67ce-697a-47be-b2f5-9ae91aab54f2&pf_rd_r=8E34GF0NSG3FRAED7AHR",
-  image: "https://images-na.ssl-images-amazon.com/images/I/51z55PQQ6iL._SL1000_.jpg"
+  image: "https://images-na.ssl-images-amazon.com/images/I/51z55PQQ6iL._SL1000_.jpg",
+  notes: ""
 )
 
 Gift.create(
@@ -76,7 +84,8 @@ Gift.create(
   list_price: 30.00,
   store: "Anthropologie",
   link: "https://www.anthropologie.com/shop/capri-blue-matte-jar-candle-e?category=all-gifts&color=010",
-  image: "https://s7d5.scene7.com/is/image/Anthropologie/E19851559_010_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain"
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/E19851559_010_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: ""
 )
 
 Gift.create(
@@ -85,7 +94,8 @@ Gift.create(
   list_price: 24.00,
   store: "Anthropologie",
   link: "https://www.anthropologie.com/shop/leah-goren-marcella-vase?category=all-gifts&color=066",
-  image: "https://s7d5.scene7.com/is/image/Anthropologie/49715568_066_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain"
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/49715568_066_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: ""
 )
 
 Gift.create(
@@ -94,7 +104,8 @@ Gift.create(
   list_price: 14.00,
   store: "Anthropologie",
   link: "https://www.anthropologie.com/shop/suite-one-studio-mimira-mug?category=all-gifts&color=102",
-  image: "https://s7d5.scene7.com/is/image/Anthropologie/D40363608_102_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain"
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/D40363608_102_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: ""
 )
 
 Gift.create(
@@ -103,7 +114,8 @@ Gift.create(
   list_price: 38.00,
   store: "Anthropologie",
   link: "https://www.anthropologie.com/shop/delicate-monogram-necklace?category=all-gifts&color=901",
-  image: "https://s7d5.scene7.com/is/image/Anthropologie/42697011_901_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain"
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/42697011_901_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: ""
 )
 
 Gift.create(
@@ -112,7 +124,8 @@ Gift.create(
   list_price: 24.00,
   store: "Anthropologie",
   link: "https://www.anthropologie.com/shop/tocca-mini-eau-de-parfum3?category=all-gifts&color=072",
-  image: "https://s7d5.scene7.com/is/image/Anthropologie/37397353_072_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain"
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/37397353_072_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: ""
 )
 
 Gift.create(
@@ -121,7 +134,8 @@ Gift.create(
   list_price: 24.00,
   store: "Anthropologie",
   link: "https://www.anthropologie.com/shop/lucy-the-llama-stuffed-animal?category=home-gifts&color=010",
-  image: "https://s7d5.scene7.com/is/image/Anthropologie/49781396_010_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain"
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/49781396_010_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: ""
 )
 
 Gift.create(
@@ -130,7 +144,8 @@ Gift.create(
   list_price: 40.00,
   store: "Anthropologie",
   link: "https://www.anthropologie.com/shop/wooden-espresso-machine-toy-set?category=gifts-for-kids&color=000",
-  image: "https://s7d5.scene7.com/is/image/Anthropologie/47716063_000_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain"
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/47716063_000_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: ""
 )
 
 Gift.create(
@@ -139,7 +154,8 @@ Gift.create(
   list_price: 79.95,
   store: "Williams Sonoma",
   link: "https://www.williams-sonoma.com/products/williams-sonoma-copper-bar-tools-set/?pkey=cgifts-under-100-dollars&isx=0.0.9917",
-  image: "https://www.williams-sonoma.com/wsimgs/ab/images/dp/wcm/201849/0568/img37j.jpg"
+  image: "https://www.williams-sonoma.com/wsimgs/ab/images/dp/wcm/201849/0568/img37j.jpg",
+  notes: ""
 )
 
 Gift.create(
@@ -148,7 +164,8 @@ Gift.create(
   list_price: 54.95,
   store: "Williams Sonoma",
   link: "https://www.williams-sonoma.com/products/williams-sonoma-double-wall-glass-french-press/?pkey=cspecialty-coffee-maker&isx=0.0.534",
-  image: "https://www.williams-sonoma.com/wsimgs/ab/images/dp/wcm/201849/0562/img71j.jpg"
+  image: "https://www.williams-sonoma.com/wsimgs/ab/images/dp/wcm/201849/0562/img71j.jpg",
+  notes: ""
 )
 
 Gift.create(
@@ -157,7 +174,8 @@ Gift.create(
   list_price: 8.50,
   store: "Harney & Sons",
   link: "https://www.harney.com/products/copy-of-paris-classic-tin-of-20-sachets?variant=13482393927751",
-  image: "https://cdn.shopify.com/s/files/1/1234/1342/products/S7A0082_dba76026-61c5-46fa-bf32-3c2b578e261d_2000x.jpg?v=1541182920"
+  image: "https://cdn.shopify.com/s/files/1/1234/1342/products/S7A0082_dba76026-61c5-46fa-bf32-3c2b578e261d_2000x.jpg?v=1541182920",
+  notes: ""
 )
 
 Gift.create(
@@ -166,7 +184,8 @@ Gift.create(
   list_price: 29.95,
   store: "Baby Gap",
   link: "https://www.gap.com/browse/product.do?pid=441174002&cid=1100435&pcid=1027203",
-  image: "https://www.gap.com/webcontent/0016/350/693/cn16350693.jpg"
+  image: "https://www.gap.com/webcontent/0016/350/693/cn16350693.jpg",
+  notes: ""
 )
 
 Gift.create(
@@ -175,7 +194,8 @@ Gift.create(
   list_price: 24.95,
   store: "Baby Gap",
   link: "https://www.gap.com/browse/product.do?pid=444024002&cid=50704&pcid=7206",
-  image: "https://www.gap.com/webcontent/0016/557/149/cn16557149.jpg"
+  image: "https://www.gap.com/webcontent/0016/557/149/cn16557149.jpg",
+  notes: ""
 )
 
 Gift.create(
@@ -184,7 +204,8 @@ Gift.create(
   list_price: 84.99,
   store: "Buy Buy Baby",
   link: "https://www.buybuybaby.com/store/product/skip-hop-reg-up-for-adventure-activity-gym/1060110053?categoryId=30527",
-  image: "https://b3h2.scene7.com/is/image/BedBathandBeyond/110031760110053p?$imagePLP$&wid=520&hei=520"
+  image: "https://b3h2.scene7.com/is/image/BedBathandBeyond/110031760110053p?$imagePLP$&wid=520&hei=520",
+  notes: ""
 )
 
 # Gift.create(
@@ -235,20 +256,27 @@ Gift.create(
 
 ###### EVENTS ######
 
-baby_shower = Event.create(user_id: katie.id, title: "Allie's baby shower", occasion: "Baby Shower", date: '6-22-2019')
+baby_shower = Event.create(user_id: katie.id, title: "Allie's baby shower", occasion: "Baby Shower", date: '6-22-2019', notes: "")
 
-dad_birthday = Event.create(user_id: katie.id, title: "Dad's Birthday", occasion: "Birthday", date: '5-25-2019')
+dad_birthday = Event.create(user_id: katie.id, title: "Dad's Birthday", occasion: "Birthday", date: '5-25-2019', notes: "")
 
-whit_wedding = Event.create(user_id: katie.id, title: "Whitney's Wedding", occasion: "Wedding", date: '5-18-2019')
+whit_wedding = Event.create(user_id: katie.id, title: "Whitney's Wedding", occasion: "Wedding", date: '5-18-2019', notes: "")
 
-mothers_day = Event.create(user_id: katie.id, title: "Mother's Day", occasion: "Mother's Day", date: '5-12-2019')
+mothers_day = Event.create(user_id: katie.id, title: "Mother's Day", occasion: "Mother's Day", date: '5-12-2019', notes: "")
 
-kevins_birthday = Event.create(user_id: katie.id, title: "Kevin's Birthday", occasion: "Birthday", date: '07-07-2019')
+kevins_birthday = Event.create(user_id: katie.id, title: "Kevin's Birthday", occasion: "Birthday", date: '07-07-2019', notes: "")
 
 person_gift_idea1 = PersonGiftIdea.create(person_id: allie.id, gift_idea_id: stroller.id)
 
 event_gift_idea1 = EventGiftIdea.create(event_id: baby_shower.id, gift_idea_id: blanket.id)
 
 person_gift_event1 = PersonGiftEvent.create(person_id: allie.id, event_id: baby_shower.id, gift_id: toy.id)
+
+person_gift_event1 = PersonGiftEvent.create(person_id: dad.id, event_id: dad_birthday.id, gift_id: toy.id)
+
+person_gift_event1 = PersonGiftEvent.create(person_id: kevin.id, event_id: kevins_birthday.id, gift_id: toy.id)
+
+person_gift_event1 = PersonGiftEvent.create(person_id: mom.id, event_id: mothers_day.id, gift_id: toy.id)
+
 
 puts "end seed file"
