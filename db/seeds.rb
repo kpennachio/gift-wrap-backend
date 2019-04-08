@@ -32,6 +32,8 @@ dad = Person.create(user_id: katie.id, name: "Dad", notes: "")
 
 mom = Person.create(user_id: katie.id, name: "Mom", notes: "")
 
+aunt_fan = Person.create(user_id: katie.id, name: "Aunt Fanny", notes: "")
+
 
 
 kevin = Person.create(user_id: katie.id, name: "Kevin", notes: "")
@@ -260,6 +262,8 @@ baby_shower = Event.create(user_id: katie.id, title: "Allie's baby shower", occa
 
 dad_birthday = Event.create(user_id: katie.id, title: "Dad's Birthday", occasion: "Birthday", date: '5-25-2019', notes: "")
 
+fathers_day = Event.create(user_id: katie.id, title: "Father's Day", date: "6-16-2019")
+
 whit_wedding = Event.create(user_id: katie.id, title: "Whitney's Wedding", occasion: "Wedding", date: '5-18-2019', notes: "")
 
 mothers_day = Event.create(user_id: katie.id, title: "Mother's Day", occasion: "Mother's Day", date: '5-12-2019', notes: "")
@@ -270,13 +274,17 @@ person_gift_idea1 = PersonGiftIdea.create(person_id: allie.id, gift_idea_id: str
 
 event_gift_idea1 = EventGiftIdea.create(event_id: baby_shower.id, gift_idea_id: blanket.id)
 
-person_gift_event1 = PersonGiftEvent.create(person_id: allie.id, event_id: baby_shower.id, gift_id: toy.id)
+person_gift_event1 = PersonGiftEvent.create(person_id: allie.id, event_id: baby_shower.id, gift_id: toy.id, price_max: 0)
 
-person_gift_event1 = PersonGiftEvent.create(person_id: dad.id, event_id: dad_birthday.id, gift_id: toy.id)
+person_gift_event2 = PersonGiftEvent.create(person_id: dad.id, event_id: dad_birthday.id, gift_id: toy.id, price_max: 0)
 
-person_gift_event1 = PersonGiftEvent.create(person_id: kevin.id, event_id: kevins_birthday.id, gift_id: toy.id)
+person_gift_event3 = PersonGiftEvent.create(person_id: kevin.id, event_id: kevins_birthday.id, gift_id: toy.id, price_max: 0)
 
-person_gift_event1 = PersonGiftEvent.create(person_id: mom.id, event_id: mothers_day.id, gift_id: toy.id)
+person_gift_event4 = PersonGiftEvent.create(person_id: mom.id, event_id: mothers_day.id, price_max: 50)
+
+person_gift_event4 = PersonGiftEvent.create(person_id: aunt_fan.id, event_id: mothers_day.id, price_max: 50)
+
+person_gift_event4 = PersonGiftEvent.create(person_id: dad.id, event_id: fathers_day.id, price_max: 0)
 
 
 puts "end seed file"
