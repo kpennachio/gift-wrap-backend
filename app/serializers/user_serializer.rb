@@ -60,6 +60,8 @@ class UserSerializer < ActiveModel::Serializer
         people: gift.people,
         events: gift.events,
         person_gift_events: pge,
+        person_gift_ideas: gift.person_gift_ideas,
+        event_gift_ideas: gift.event_gift_ideas,
         pending_events: gift.pending_events,
         pending_people: gift.pending_people
       }
