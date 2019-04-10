@@ -32,7 +32,7 @@ class Api::V1::PersonGiftEventsController < ApplicationController
   private
 
   def person_gift_event_params
-    params.permit(:event_id, :person_id, :gift_id)
+    params.permit(:event_id, :person_id, :gift_id, :price_max, :gift_actual_cost)
   end
 
   def find_person_gift_event

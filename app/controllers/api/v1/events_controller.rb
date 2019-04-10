@@ -29,6 +29,10 @@ class Api::V1::EventsController < ApplicationController
 
   end
 
+  def get_budget
+    
+  end
+
   private
 
   def event_params

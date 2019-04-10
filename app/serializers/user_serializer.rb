@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :events, :people, :gifts
+  attributes :id, :username, :first_name, :last_name, :email, :events, :people, :gifts, :budgets
 
   def events
     self.object.events.map do |event|

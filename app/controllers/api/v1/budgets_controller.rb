@@ -32,7 +32,7 @@ class Api::V1::BudgetsController < ApplicationController
   private
 
   def budget_params
-    params.permit(:budgetname)
+    params.permit(:budget, :user_id, :year)
   end
 
   def find_budget

@@ -33,6 +33,13 @@ class Api::V1::UsersController < ApplicationController
 
   end
 
+  def get_budget
+    user = User.find(params[:id])
+    budgets = Budget.all.where(user_id: user.id)
+    
+
+  end
+
   private
 
   def user_params
