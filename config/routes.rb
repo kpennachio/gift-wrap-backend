@@ -10,6 +10,12 @@ Rails.application.routes.draw do
       resources :person_gift_ideas, only: [:index, :create, :update, :destroy]
       resources :person_gift_events, only: [:index, :create, :update, :destroy]
       resources :event_gift_ideas, only: [:index, :create, :update, :destroy]
+
+      # route to login
+			post "/login", to: "auth#login"
+
+			# login on refresh
+			get '/auto_login', to: "auth#auto_login"
     end
   end
 end
