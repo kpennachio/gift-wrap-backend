@@ -25,13 +25,7 @@ class Api::V1::GiftsController < ApplicationController
   end
 
   def destroy
-
-    # @person_gift_ideas = PersonGiftIdea.where(gift_idea_id: params[:id]).destroy_all
-    # @event_gift_ideas = EventGiftIdea.where(gift_idea_id: params[:id]).destroy_all
-    # @person_gift_events = PersonGiftEvent.where(gift_id: params[:id]).destroy_all
-
     @gift = Gift.find(params[:id]).destroy
-
   end
 
   private
