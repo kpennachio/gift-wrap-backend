@@ -10,4 +10,13 @@ class Person < ApplicationRecord
 
   validates :name, presence: true
 
+  before_destroy :destroy_associated, prepend: true
+
+   private
+
+   def destroy_associated
+     self.person_gift_events.destroy_all
+     self.person_gift_ideas.destroy_all
+    
+   end
 end

@@ -36,14 +36,14 @@ class Api::V1::UsersController < ApplicationController
   def get_budget
     user = User.find(params[:id])
     budgets = Budget.all.where(user_id: user.id)
-    
+
 
   end
 
   private
 
   def user_params
-    params.permit(:username)
+    params.permit(:username, :password, :email, :first_name, :last_name)
   end
 
   def find_user
