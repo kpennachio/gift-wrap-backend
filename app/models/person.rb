@@ -9,7 +9,7 @@ class Person < ApplicationRecord
   has_many :gift_ideas, through: :person_gift_ideas
 
   validates :name, presence: true
-  validates :name, :uniqueness => {:scope=>:user_id, message: "^oops you already added this person" }
+  validates :name, :uniqueness => {:scope=>:user_id, message: "^oops you already have this person" }
 
   before_destroy :destroy_associated, prepend: true
 
