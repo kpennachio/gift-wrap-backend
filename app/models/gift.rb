@@ -11,6 +11,9 @@ class Gift < ApplicationRecord
   has_many :person_gift_ideas, foreign_key: "gift_idea_id"
   has_many :pending_people, through: :person_gift_ideas, source: "person"
 
+  validates :name, presence: true
+  validates :name, uniqueness: {message: "^You already have a gift with this name." }
+
   before_destroy :destroy_associated, prepend: true
 
    private
