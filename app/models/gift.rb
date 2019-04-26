@@ -12,7 +12,7 @@ class Gift < ApplicationRecord
   has_many :pending_people, through: :person_gift_ideas, source: "person"
 
   validates :name, presence: true
-  validates :name, uniqueness: {message: "^You already have a gift with this name." }
+  validates :name, :uniqueness => { :scope=>:user_id, :case_sensitive => false, message: "^You already have a gift with this name." }
 
   before_destroy :destroy_associated, prepend: true
 
