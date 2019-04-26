@@ -10,7 +10,7 @@ class Event < ApplicationRecord
 
   validates :date, presence: true
   validates :title, presence: true
-  validates :title, :uniqueness => { :scope=>:user_id, :case_sensitive => false, message: "^You already have an event with this name." }
+  validates :title, :uniqueness => { :scope => [:user_id, :date], :case_sensitive => false, message: "^You already have an event with this name on this date." }
 
   before_destroy :destroy_associated, prepend: true
 
