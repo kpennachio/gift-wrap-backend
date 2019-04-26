@@ -9,6 +9,8 @@ class Event < ApplicationRecord
   has_many :gift_ideas, through: :event_gift_ideas
 
   validates :date, presence: true
+  validates :title, presence: true
+  validates :title, :uniqueness => { :scope=>:user_id, :case_sensitive => false, message: "^You already have an event with this name." }
 
   before_destroy :destroy_associated, prepend: true
 
