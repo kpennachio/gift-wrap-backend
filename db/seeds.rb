@@ -264,20 +264,24 @@ baby_gym = Gift.create(
 #   image: ""
 # )
 
+# Date::strptime(your_date_string,"%m-%d-%Y")
+#
+#
+# Date::strptime('07-07-2019',"%m-%d-%Y")
 
 ###### EVENTS ######
 
-baby_shower = Event.create(user_id: katie.id, title: "Allie's baby shower", occasion: "Baby Shower", date: '6-22-2019', notes: "")
+baby_shower = Event.create(user_id: katie.id, title: "Allie's baby shower", occasion: "Baby Shower", date: Date::strptime('06-22-2019',"%m-%d-%Y"), notes: "")
 
-dad_birthday = Event.create(user_id: katie.id, title: "Dad's Birthday", occasion: "Birthday", date: '5-25-2019', notes: "")
+dad_birthday = Event.create(user_id: katie.id, title: "Dad's Birthday", occasion: "Birthday", date: Date::strptime('05-25-2019',"%m-%d-%Y"), notes: "")
 
-fathers_day = Event.create(user_id: katie.id, title: "Father's Day", date: "6-16-2019")
+fathers_day = Event.create(user_id: katie.id, title: "Father's Day", date: Date::strptime("06-16-2019","%m-%d-%Y"))
 
-whit_wedding = Event.create(user_id: katie.id, title: "Whitney's Wedding", occasion: "Wedding", date: '5-18-2019', notes: "")
+whit_wedding = Event.create(user_id: katie.id, title: "Whitney's Wedding", occasion: "Wedding", date: Date::strptime('05-18-2019',"%m-%d-%Y"), notes: "")
 
-mothers_day = Event.create(user_id: katie.id, title: "Mother's Day", occasion: "Mother's Day", date: '5-12-2019', notes: "")
+mothers_day = Event.create(user_id: katie.id, title: "Mother's Day", occasion: "Mother's Day", date: Date::strptime('05-12-2019',"%m-%d-%Y"), notes: "")
 
-kevins_birthday = Event.create(user_id: katie.id, title: "Kevin's Birthday", occasion: "Birthday", date: '07-07-2019', notes: "")
+kevins_birthday = Event.create(user_id: katie.id, title: "Kevin's Birthday", occasion: "Birthday", date: Date::strptime('07-07-2019',"%m-%d-%Y"), notes: "")
 
 person_gift_idea1 = PersonGiftIdea.create(person_id: allie.id, gift_idea_id: necklace.id)
 

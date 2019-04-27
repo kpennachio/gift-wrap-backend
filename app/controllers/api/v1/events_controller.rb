@@ -16,6 +16,8 @@ class Api::V1::EventsController < ApplicationController
   end
 
   def create
+    byebug
+    date = params["date"]
     @event = Event.new(event_params)
     if @event.save
       render json: @event, status: :accepted
@@ -30,7 +32,7 @@ class Api::V1::EventsController < ApplicationController
   end
 
   def get_budget
-    
+
   end
 
   private

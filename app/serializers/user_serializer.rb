@@ -3,7 +3,7 @@ class UserSerializer < ActiveModel::Serializer
 
   def events
     self.object.events.map do |event|
-        date = Date.strptime(event.date, "%m-%d-%Y")
+        # date = Date.strptime(event.date, "%m-%d-%Y")
 
         pge = event.person_gift_events.map do |pge|
           {id: pge.id, person: pge.person, gift: pge.gift, gift_actual_cost: pge.gift_actual_cost, price_min: pge.price_min, price_max: pge.price_max}
@@ -13,9 +13,9 @@ class UserSerializer < ActiveModel::Serializer
         title: event.title,
         occasion: event.occasion,
         date: event.date,
-        dateFormatted: date.strftime("%A, %B %-d, %Y"),
-        month: date.month,
-        year: date.year,
+        dateFormatted: event.date.strftime("%A, %B %-d, %Y"),
+        month: event.date.month,
+        year: event.date.year,
         notes: event.notes,
         registryLink: event.registry_link,
         person_gift_events: pge,
