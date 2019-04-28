@@ -10,6 +10,7 @@ class UserMailer < ApplicationMailer
   def reminder_email
     @user = params[:user]
     @event = params[:event]
+    @people = params[:people]
     @url  = "http://localhost:3001/checklist/#{@event.id}"
     mail(to: @user.email, subject: "#{@event.title} is in two weeks!")
   end

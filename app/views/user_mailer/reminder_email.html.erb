@@ -6,6 +6,11 @@
   <body>
     <p>Hi <%= @user.first_name %>,</p>
     <p><%= @event.title %> is in two weeks!</p>
+    <p>Event date: <%= @event.date.strftime("%A, %B %-d, %Y")%></p>
+    <p>Missing a gift for: </p>
+    <% @people.each do |person| %>
+    <%= person %><br/>
+    <% end %>
     <p>Find a gift on Gift Wrap: <%= @url %></p>
   </body>
 </html>

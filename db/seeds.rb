@@ -303,7 +303,7 @@ susie_wedding = Event.create(user_id: katie.id, title: "Susie's Wedding", occasi
 
 mothers_day = Event.create(user_id: katie.id, title: "Mother's Day", occasion: "Mother's Day", date: Date::strptime('05-12-2019',"%m-%d-%Y"), notes: "")
 
-kevins_birthday = Event.create(user_id: katie.id, title: "Kevin's Birthday", occasion: "Birthday", date: Date::strptime('07-07-2019',"%m-%d-%Y"), notes: "")
+kevins_birthday = Event.create(user_id: katie.id, title: "Kevin's Birthday", occasion: "Birthday", date: Date::strptime('05-12-2019',"%m-%d-%Y"), notes: "")
 
 person_gift_idea1 = PersonGiftIdea.create(person_id: allie.id, gift_idea_id: necklace.id)
 
