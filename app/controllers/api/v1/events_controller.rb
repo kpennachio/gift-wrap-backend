@@ -8,6 +8,8 @@ class Api::V1::EventsController < ApplicationController
 
   def update
     @event.update(event_params)
+    @event.date = Date.strptime(event_params[:date], "%m-%d-%Y")
+
     if @event.save
       render json: @event, status: :accepted
     else
@@ -16,9 +18,9 @@ class Api::V1::EventsController < ApplicationController
   end
 
   def create
-    byebug
-    date = params["date"]
     @event = Event.new(event_params)
+    @event.date = Date.strptime(event_params[:date], "%m-%d-%Y")
+
     if @event.save
       render json: @event, status: :accepted
     else
