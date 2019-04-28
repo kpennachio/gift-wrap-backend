@@ -24,4 +24,9 @@ class User < ApplicationRecord
      self.budgets.destroy_all
    end
 
+   def upcoming_events
+     
+
+   end
+
 end
