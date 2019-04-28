@@ -9,8 +9,6 @@ require 'date'
 
 puts "start seed file"
 
-
-
 PersonGiftIdea.delete_all
 EventGiftIdea.delete_all
 PersonGiftEvent.delete_all
@@ -32,9 +30,9 @@ dad = Person.create(user_id: katie.id, name: "Dad", notes: "")
 
 mom = Person.create(user_id: katie.id, name: "Mom", notes: "")
 
-aunt_fan = Person.create(user_id: katie.id, name: "Aunt Fanny", notes: "")
+aunt_gertrude = Person.create(user_id: katie.id, name: "Aunt Gertrude", notes: "")
 
-whitney = Person.create(user_id: katie.id, name: "Whitney", notes: "")
+susie = Person.create(user_id: katie.id, name: "Susie", notes: "")
 
 kevin = Person.create(user_id: katie.id, name: "Kevin", notes: "")
 
@@ -84,7 +82,7 @@ Gift.create(
   link: "https://www.anthropologie.com/shop/capri-blue-matte-jar-candle-e?category=all-gifts&color=010",
   image: "https://s7d5.scene7.com/is/image/Anthropologie/E19851559_010_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
   notes: "",
-  age_range: "All Ages"
+  age_range: "Adults"
 )
 
 Gift.create(
@@ -95,7 +93,7 @@ Gift.create(
   link: "https://www.anthropologie.com/shop/leah-goren-marcella-vase?category=all-gifts&color=066",
   image: "https://s7d5.scene7.com/is/image/Anthropologie/49715568_066_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
   notes: "",
-  age_range: "All Ages"
+  age_range: "Adults"
 )
 
 Gift.create(
@@ -106,7 +104,7 @@ Gift.create(
   link: "https://www.anthropologie.com/shop/suite-one-studio-mimira-mug?category=all-gifts&color=102",
   image: "https://s7d5.scene7.com/is/image/Anthropologie/D40363608_102_b10?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
   notes: "",
-  age_range: "All Ages"
+  age_range: "Adults"
 )
 
 necklace = Gift.create(
@@ -117,7 +115,7 @@ necklace = Gift.create(
   link: "https://www.anthropologie.com/shop/delicate-monogram-necklace?category=all-gifts&color=901",
   image: "https://s7d5.scene7.com/is/image/Anthropologie/42697011_901_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
   notes: "",
-  age_range: "All Ages"
+  age_range: "Adults"
 )
 
 Gift.create(
@@ -219,33 +217,61 @@ baby_gym = Gift.create(
   age_range: "Babies"
 )
 
-# Gift.create(
-#   user_id: katie.id,
-#   name: "",
-#   list_price: 69.99,
-#   store: "",
-#   link: "",
-#   image: ""
-# )
-#
-# Gift.create(
-#   user_id: katie.id,
-#   name: "",
-#   list_price: 69.99,
-#   store: "",
-#   link: "",
-#   image: ""
-# )
-#
-# Gift.create(
-#   user_id: katie.id,
-#   name: "",
-#   list_price: 69.99,
-#   store: "",
-#   link: "",
-#   image: ""
-# )
-#
+Gift.create(
+  user_id: katie.id,
+  name: "Brushed Antique Bronze 11x14 Frame",
+  list_price: 49.95,
+  store: "Crate and Barrel",
+  link: "https://www.crateandbarrel.com/brushed-antique-bronze-11x14-frame/s683001",
+  image: "https://images.crateandbarrel.com/is/image/Crate/BrshedAntiqBrnzFrame11x14F16/?$web_product_hero$&160623111019&wid=625&hei=625",
+  notes: "",
+  age_range: "Adults"
+)
+
+Gift.create(
+  user_id: katie.id,
+  name: "Wood Marble Cheese Slicer",
+  list_price: 39.95,
+  store: "Crate and Barrel",
+  link: "https://www.crateandbarrel.com/wood-marble-cheese-slicer/s266058",
+  image: "https://images.crateandbarrel.com/is/image/Crate/WoodMarbleChseSlicerSHS17/?$web_product_hero$&161222141244&wid=625&hei=625",
+  notes: "",
+  age_range: "Adults"
+)
+
+Gift.create(
+  user_id: katie.id,
+  name: "Black-Handled 4-Piece Barbecue Tool Set",
+  list_price: 49.95,
+  store: "Crate and Barrel",
+  link: "https://www.crateandbarrel.com/black-handled-4-piece-barbecue-tool-set/s261973",
+  image: "https://images.crateandbarrel.com/is/image/Crate/BlackHandled4PcBBQToolSetAVSHF16/?$web_product_hero$&160928145301&wid=625&hei=625",
+  notes: "",
+  age_range: "Adults"
+)
+
+Gift.create(
+  user_id: katie.id,
+  name: "Brass Wine Rack",
+  list_price: 58.00,
+  store: "Anthropologie",
+  link: "https://www.anthropologie.com/shop/brass-wine-rack?category=home-gifts&color=070",
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/44222123_070_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: "",
+  age_range: "Adults"
+)
+
+Gift.create(
+  user_id: katie.id,
+  name: "Edna Embellished Throw Blanket",
+  list_price: 128.00,
+  store: "Anthropologie",
+  link: "https://www.anthropologie.com/shop/edna-embellished-throw-blanket?category=home-gifts&color=018",
+  image: "https://s7d5.scene7.com/is/image/Anthropologie/44314482_018_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain",
+  notes: "",
+  age_range: "Adults"
+)
+
 # Gift.create(
 #   user_id: katie.id,
 #   name: "",
@@ -264,10 +290,6 @@ baby_gym = Gift.create(
 #   image: ""
 # )
 
-# Date::strptime(your_date_string,"%m-%d-%Y")
-#
-#
-# Date::strptime('07-07-2019',"%m-%d-%Y")
 
 ###### EVENTS ######
 
@@ -277,7 +299,7 @@ dad_birthday = Event.create(user_id: katie.id, title: "Dad's Birthday", occasion
 
 fathers_day = Event.create(user_id: katie.id, title: "Father's Day", date: Date::strptime("06-16-2019","%m-%d-%Y"))
 
-whit_wedding = Event.create(user_id: katie.id, title: "Whitney's Wedding", occasion: "Wedding", date: Date::strptime('05-18-2019',"%m-%d-%Y"), notes: "")
+susie_wedding = Event.create(user_id: katie.id, title: "Susie's Wedding", occasion: "Wedding", date: Date::strptime('06-29-2019',"%m-%d-%Y"), notes: "")
 
 mothers_day = Event.create(user_id: katie.id, title: "Mother's Day", occasion: "Mother's Day", date: Date::strptime('05-12-2019',"%m-%d-%Y"), notes: "")
 
@@ -295,11 +317,11 @@ person_gift_event3 = PersonGiftEvent.create(person_id: kevin.id, event_id: kevin
 
 person_gift_event4 = PersonGiftEvent.create(person_id: mom.id, event_id: mothers_day.id, price_max: 50, gift_actual_cost: 0)
 
-person_gift_event4 = PersonGiftEvent.create(person_id: aunt_fan.id, event_id: mothers_day.id, price_max: 50, gift_actual_cost: 0)
+person_gift_event4 = PersonGiftEvent.create(person_id: aunt_gertrude.id, event_id: mothers_day.id, price_max: 50, gift_actual_cost: 0)
 
 person_gift_event4 = PersonGiftEvent.create(person_id: dad.id, event_id: fathers_day.id, price_max: 0, gift_actual_cost: 0)
 
-person_gift_event5 = PersonGiftEvent.create(person_id: whitney.id, event_id: whit_wedding.id, price_max: 0, gift_actual_cost: 0)
+person_gift_event5 = PersonGiftEvent.create(person_id: susie.id, event_id: susie_wedding.id, price_max: 0, gift_actual_cost: 0)
 
 
 puts "end seed file"
