@@ -295,7 +295,7 @@ Gift.create(
 
 baby_shower = Event.create(user_id: katie.id, title: "Allie's baby shower", occasion: "Baby Shower", date: Date::strptime('06-22-2019',"%m-%d-%Y"), notes: "")
 
-aunt_gertrude_birthday = Event.create(user_id: katie.id, title: "Aunt Gertrude's Birthday", occasion: "Birthday", date: Date::strptime('05-25-2019',"%m-%d-%Y"), notes: "")
+susie_birthday = Event.create(user_id: katie.id, title: "Susie's Birthday", occasion: "Birthday", date: Date::strptime('05-25-2019',"%m-%d-%Y"), notes: "")
 
 fathers_day = Event.create(user_id: katie.id, title: "Father's Day", date: Date::strptime("06-16-2019","%m-%d-%Y"))
 
@@ -311,7 +311,7 @@ event_gift_idea1 = EventGiftIdea.create(event_id: baby_shower.id, gift_idea_id: 
 
 person_gift_event1 = PersonGiftEvent.create(person_id: allie.id, event_id: baby_shower.id, price_max: 0, gift_actual_cost: 0)
 
-person_gift_event2 = PersonGiftEvent.create(person_id: aunt_gertrude.id, event_id: aunt_gertrude_birthday.id, price_max: 0, gift_actual_cost: 0)
+person_gift_event2 = PersonGiftEvent.create(person_id: susie.id, event_id: susie_birthday.id, price_max: 0, gift_actual_cost: 0)
 
 person_gift_event3 = PersonGiftEvent.create(person_id: kevin.id, event_id: kevins_birthday.id, price_max: 0, gift_actual_cost: 0)
 
