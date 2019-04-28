@@ -5,7 +5,7 @@
   </head>
   <body>
     <p>Hi <%= @user.first_name %>,</p>
-    <p><%= @event.title %> is in two weeks!</p>
+    <p><%= @event.title %> is in <%= @time %> !</p>
     <p>Event date: <%= @event.date.strftime("%A, %B %-d, %Y")%></p>
     <p>Missing a gift for: </p>
     <% @people.each do |person| %>

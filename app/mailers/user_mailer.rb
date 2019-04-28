@@ -11,8 +11,16 @@ class UserMailer < ApplicationMailer
     @user = params[:user]
     @event = params[:event]
     @people = params[:people]
+    @time = ""
+
+    if params[:days] == 7
+      @time = "one week"
+    elsif params[:days] == 14
+      @time = "two weeks"
+    end
+
     @url  = "http://localhost:3001/checklist/#{@event.id}"
-    mail(to: @user.email, subject: "#{@event.title} is in two weeks!")
+    mail(to: @user.email, subject: "#{@event.title} is in #{@time}!")
   end
 
 end
