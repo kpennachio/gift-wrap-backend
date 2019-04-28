@@ -18,7 +18,7 @@ Person.delete_all
 Gift.delete_all
 User.delete_all
 
-katie = User.create(username: "katie", password: "123", first_name: "Katie", last_name: "Pennachio", email: "katie.pennachio@gmail.com")
+katie = User.create(username: "katie", password: "123", first_name: "Katie", last_name: "Pennachio", email: "katie.pennachio@gmail.com", email_reminder: 14)
 
 budget = Budget.create(user_id: katie.id, year: 2019, budget: 100)
 

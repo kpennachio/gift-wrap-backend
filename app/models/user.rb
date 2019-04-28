@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :event_gift_ideas, through: :events
   has_secure_password
 
-  validates :username, :password, :email, :first_name, :last_name, presence: true
+  validates :username, :password, :email, :first_name, :last_name, presence: true, :if => :password
   validates :username, uniqueness: {message: "^Sadly this username is taken!" }
   validates :email, uniqueness: {message: "^Hmmm there is an existing account with this email." }
 
@@ -25,7 +25,7 @@ class User < ApplicationRecord
    end
 
    def upcoming_events
-     
+
 
    end
 
