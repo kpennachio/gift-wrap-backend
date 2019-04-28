@@ -9,7 +9,6 @@ class Api::V1::EventsController < ApplicationController
   def update
     @event.update(event_params)
     @event.date = Date.strptime(event_params[:date], "%m-%d-%Y")
-
     if @event.save
       render json: @event, status: :accepted
     else
