@@ -24,7 +24,7 @@ class Api::V1::AuthController < ApplicationController
     if user
       render json: user
     else
-      render json: {errors: "I dont think so"}
+      render json: {errors: "No current user"}
     end
   end
 end

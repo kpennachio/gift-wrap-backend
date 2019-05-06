@@ -6,9 +6,10 @@ class User < ApplicationRecord
   has_many :person_gift_events, through: :events
   has_many :person_gift_ideas, through: :people
   has_many :event_gift_ideas, through: :events
-  has_secure_password
+  has_secure_password validations: false
+  validates_presence_of :password, on: :create
 
-  validates :username, :password, :email, :first_name, :last_name, presence: true, :if => :password
+  validates :username, :email, :first_name, :last_name, presence: true
   validates :username, uniqueness: {message: "^Sadly this username is taken!" }
   validates :email, uniqueness: {message: "^Hmmm there is an existing account with this email." }
 
