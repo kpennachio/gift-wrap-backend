@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
      # -> send back user id
 
  def encode_token(payload)
-   JWT.encode(payload, Rails.application.credentials.jwt[:key])
+   JWT.encode(payload, ENV["JWT_KEY"])
    # payload {user_id: 1}
    # => enaj.fewfwaf.dfadf
  end
@@ -15,7 +15,7 @@ class ApplicationController < ActionController::API
    # JWT.decode()
    # no need to check if there are headers because of the begin rescue!!
    begin
-     JWT.decode(auth_headers, Rails.application.credentials.jwt[:key])
+     JWT.decode(auth_headers, ENV["JWT_KEY"])
    rescue
      nil
    end
